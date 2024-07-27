@@ -18,16 +18,74 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: #E8F5FC; /* Ensure the background color covers the entire body */
+  scroll-behavior: smooth; /* Add smooth scrolling effect */
+}
+
+/* Ensure the main content and footer also have the background color */
+main, footer {
+  background-color: #E8F5FC;
+}
+
+/* Ensure images are visible and not affected by other styles */
+.relative {
+  position: relative;
+  z-index: 10; /* Ensure image is above other elements */
+}
+.py-24 {
+  padding-top: 2rem;
+}
+
+.relative img {
+  display: block; /* Ensure images are block-level and not affected by inline settings */
+}
+
+/* Additional Global Text Color */
+.text-black {
+  color: black;
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .scrolling-up {
+    background: linear-gradient(
+            to bottom,
+            rgba(var(--background-end-rgb), 0.7),
+            rgba(var(--background-start-rgb), 0.8)
+    );
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  }
+
+  .scrolling-down {
+    background: linear-gradient(
+            to bottom,
+            rgba(var(--background-end-rgb), 0.9),
+            rgba(var(--background-start-rgb), 1)
+    );
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.3);
+  }
+
+  .shadow-md {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .shadow-lg {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* Responsive for mobile */
+@media (max-width: 640px) {
+  .header-nav {
+    display: none; /* Hide default navigation */
+  }
+
+  .mobile-menu-button {
+    display: block;
+    padding: 0.5rem;
+    background-color: #2b6cb0; /* Button color */
+    color: black;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    text-align: center;
   }
 }
