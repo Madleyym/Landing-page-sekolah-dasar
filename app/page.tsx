@@ -12,9 +12,9 @@ export default function Home() {
                     </h2>
                     <div className="flex flex-col items-center">
                         <img
-                            src="/guru1.jpg" // Gantilah dengan path gambar kepala sekolah Anda
+                            src="/guru1.jpg"
                             alt="Kepala Sekolah"
-                            className="w-48 h-48 rounded-full object-cover mb-2" // Gaya gambar dengan ukuran lebih besar
+                            className="w-48 h-48 rounded-full object-cover mb-2"
                         />
                         <p className="text-lg font-semibold text-black">
                             Nama Kepala Sekolah
@@ -215,31 +215,30 @@ export default function Home() {
                     <h2 className="mb-3 text-2xl font-semibold text-black text-center">
                         Kontak Kami
                     </h2>
-                    <div className="flex justify-center">
+                    <div className="flex flex-col items-center">
                         <p className="m-0 max-w-[30ch] text-sm opacity-80 text-black text-center mb-6">
-                            (021) 123-4567<br/>
+                            (021) 123-4567<br />
                             info@sdkemenangan.sch.id
                         </p>
-                    </div>
-
-                    <div className="flex space-x-4 justify-center mb-2"> {/* Tambahkan mb-2 di sini */}
-                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-                            <FontAwesomeIcon icon={faFacebook} className="text-blue-600 hover:text-blue-800 fa-2x"/>
-                        </a>
-                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-                            <FontAwesomeIcon icon={faInstagram} className="text-pink-600 hover:text-pink-800 fa-2x"/>
-                        </a>
-                        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
-                            <FontAwesomeIcon icon={faYoutube} className="text-red-600 hover:text-red-800 fa-2x"/>
-                        </a>
-                        <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer">
-                            <FontAwesomeIcon icon={faTiktok} className="text-black hover:text-gray-400 fa-2x"/>
-                        </a>
+                        <div className="flex space-x-4 mb-2"> {/* Jarak antar ikon sosial media */}
+                            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                                <FontAwesomeIcon icon={faFacebook} className="text-blue-600 hover:text-blue-800 fa-2x" />
+                            </a>
+                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                                <FontAwesomeIcon icon={faInstagram} className="text-pink-600 hover:text-pink-800 fa-2x" />
+                            </a>
+                            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
+                                <FontAwesomeIcon icon={faYoutube} className="text-red-600 hover:text-red-800 fa-2x" />
+                            </a>
+                            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer">
+                                <FontAwesomeIcon icon={faTiktok} className="text-black hover:text-gray-400 fa-2x" />
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <footer className="text-black py-4 text-center">
+            <footer className="text-black mb-2 py-2 text-center">
                 <p className="text-sm">
                     &copy; {new Date().getFullYear()} SDN Margasari. Semua Hak Cipta Dilindungi.
                 </p>
