@@ -1,253 +1,205 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram, faYoutube, faTiktok } from '@fortawesome/free-brands-svg-icons';
+import Link from 'next/link';
 
 export default function Home() {
     return (
         <>
-            <div className="flex flex-col items-center justify-center min-h-screen space-y-8">
+            <header className="fixed top-0 right-0 w-full p-4 shadow-md" style={{backgroundColor: '#E8F5FC'}}>
+                <nav className="container mx-auto">
+                <ul className="flex justify-center space-x-4">
+                        <li><Link href="/visimisi" className="text-blue-600 hover:text-blue-800">Visi & Misi</Link></li>
+                        <li><Link href="/tentang-sekolah" className="text-blue-600 hover:text-blue-800">Tentang Sekolah</Link></li>
+                        <li><Link href="/profil-sekolah" className="text-blue-600 hover:text-blue-800">Profil Sekolah</Link></li>
+                        <li><Link href="/berita" className="text-blue-600 hover:text-blue-800">Berita</Link></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <div className="flex flex-col items-center justify-center min-h-screen mt-16">
                 {/* Bagian Kepala Sekolah */}
                 <div className="text-center">
-                    <h2 className="mb-3 text-2xl font-semibold text-black">
+                    <h2 className="mb-4 text-2xl font-semibold text-black">
                         Kepala Sekolah
                     </h2>
                     <div className="flex flex-col items-center">
                         <img
-                            src="/guru1.jpg"
+                            src="/avatar/Maman,S.pd.jpg"
                             alt="Kepala Sekolah"
                             className="w-48 h-48 rounded-full object-cover mb-2"
                         />
                         <p className="text-lg font-semibold text-black">
-                            Nama Kepala Sekolah
+                            Maman, S.Pd
                         </p>
                     </div>
                 </div>
 
                 {/* Bagian Guru */}
-                <div className="text-center">
-                    <h2 className="mb-3 text-2xl font-semibold whitespace-nowrap text-black">
+                <div className="text-center mt-16">
+                    <h2 className="mb-2 text-2xl font-semibold text-black">
                         Guru
                     </h2>
                     <div className="py-4">
                         {/* Baris Atas - 5 Guru */}
                         <div className="flex flex-wrap justify-center gap-4 mb-4">
-                            <div className="flex-none w-32">
+                            <div className="flex-none w-32 text-center">
                                 <img
-                                    src="/guru1.jpg"
-                                    alt="Guru 1"
+                                    src="/avatar/Tuti Alawiyah.jpg"
+                                    alt="Tuti Alawiyah"
                                     className="w-32 h-32 rounded-full object-cover mb-2"
                                 />
-                                <p className="text-center mt-2 text-sm font-semibold text-black">Nama Guru 1</p>
-                                <p className="text-center text-xs text-gray-600">Matematika</p>
+                                <p className="text-sm font-semibold text-black">Tuti Alawiyah, S.Pd</p>
+                                <p className="text-xs text-gray-600">Guru 1</p>
                             </div>
-                            <div className="flex-none w-32">
+                            <div className="flex-none w-32 text-center">
                                 <img
-                                    src="/guru1.jpg"
-                                    alt="Guru 2"
+                                    src="/avatar/Fitri Sarifatun Nisa, S.Pd.jpg"
+                                    alt="Fitri Sarifatun Nisa"
                                     className="w-32 h-32 rounded-full object-cover mb-2"
                                 />
-                                <p className="text-center mt-2 text-sm font-semibold text-black">Nama Guru 2</p>
-                                <p className="text-center text-xs text-gray-600">Bahasa Inggris</p>
+                                <p className="text-sm font-semibold text-black">Fitri Sarifatun Nisa, S.Pd</p>
+                                <p className="text-xs text-gray-600">Guru 2</p>
                             </div>
-                            <div className="flex-none w-32">
+                            <div className="flex-none w-32 text-center">
                                 <img
-                                    src="/guru1.jpg"
-                                    alt="Guru 3"
+                                    src="/avatar/Shelly Asmaryani, S.Pd.I.jpg"
+                                    alt="Shelly Asmaryani"
                                     className="w-32 h-32 rounded-full object-cover mb-2"
                                 />
-                                <p className="text-center mt-2 text-sm font-semibold text-black">Nama Guru 3</p>
-                                <p className="text-center text-xs text-gray-600">IPA</p>
+                                <p className="text-sm font-semibold text-black">Shelly Asmaryani, S.Pd.I</p>
+                                <p className="text-xs text-gray-600">Guru 3</p>
                             </div>
-                            <div className="flex-none w-32">
+                            <div className="flex-none w-32 text-center">
                                 <img
-                                    src="/guru1.jpg"
-                                    alt="Guru 4"
+                                    src="/avatar/Firmansyah Suwandi, S.Pd.jpg"
+                                    alt="Firmansyah Suwandi"
                                     className="w-32 h-32 rounded-full object-cover mb-2"
                                 />
-                                <p className="text-center mt-2 text-sm font-semibold text-black">Nama Guru 4</p>
-                                <p className="text-center text-xs text-gray-600">Sejarah</p>
+                                <p className="text-sm font-semibold text-black">Firmansyah Suwandi, S.Pd</p>
+                                <p className="text-xs text-gray-600">Guru 4</p>
                             </div>
-                            <div className="flex-none w-32">
+                            <div className="flex-none w-32 text-center">
                                 <img
-                                    src="/guru1.jpg"
-                                    alt="Guru 5"
+                                    src="/avatar/Ayu Wahyuni, S.Pd.jpg"
+                                    alt="Ayu Wahyuni"
                                     className="w-32 h-32 rounded-full object-cover mb-2"
                                 />
-                                <p className="text-center mt-2 text-sm font-semibold text-black">Nama Guru 5</p>
-                                <p className="text-center text-xs text-gray-600">Biologi</p>
+                                <p className="text-sm font-semibold text-black">Ayu Wahyuni, S.Pd</p>
+                                <p className="text-xs text-gray-600">Guru 5</p>
                             </div>
                         </div>
 
-                        {/* Baris Bawah - 6 Guru */}
+                        {/* Baris Bawah - 3 Guru */}
                         <div className="flex flex-wrap justify-center gap-4">
-                            <div className="flex-none w-32">
+                            <div className="flex-none w-32 text-center">
                                 <img
-                                    src="/guru1.jpg"
-                                    alt="Guru 6"
+                                    src="/avatar/Indra Triyana, S.Pd.I.jpg"
+                                    alt="Indra Triyana"
                                     className="w-32 h-32 rounded-full object-cover mb-2"
                                 />
-                                <p className="text-center mt-2 text-sm font-semibold text-black">Nama Guru 6</p>
-                                <p className="text-center text-xs text-gray-600">Fisika</p>
+                                <p className="text-sm font-semibold text-black">Indra Triyana, S.Pd.I</p>
+                                <p className="text-xs text-gray-600">Guru 6</p>
                             </div>
-                            <div className="flex-none w-32">
+                            <div className="flex-none w-32 text-center">
                                 <img
-                                    src="/guru1.jpg"
-                                    alt="Guru 7"
+                                    src="/avatar/Yuyun Yundiroh, S.Pd.I.jpg"
+                                    alt="Yuyun Yundiroh"
                                     className="w-32 h-32 rounded-full object-cover mb-2"
                                 />
-                                <p className="text-center mt-2 text-sm font-semibold text-black">Nama Guru 7</p>
-                                <p className="text-center text-xs text-gray-600">Kimia</p>
+                                <p className="text-sm font-semibold text-black">Yuyun Yundiroh, S.Pd.I</p>
+                                <p className="text-xs text-gray-600">Guru 7</p>
                             </div>
-                            <div className="flex-none w-32">
+                            <div className="flex-none w-32 text-center">
                                 <img
-                                    src="/guru1.jpg"
-                                    alt="Guru 8"
+                                    src="/avatar/Teguh Gumilar, S.Pd.jpg"
+                                    alt="Teguh Gumilar"
                                     className="w-32 h-32 rounded-full object-cover mb-2"
                                 />
-                                <p className="text-center mt-2 text-sm font-semibold text-black">Nama Guru 8</p>
-                                <p className="text-center text-xs text-gray-600">Ekonomi</p>
-                            </div>
-                            <div className="flex-none w-32">
-                                <img
-                                    src="/guru1.jpg"
-                                    alt="Guru 9"
-                                    className="w-32 h-32 rounded-full object-cover mb-2"
-                                />
-                                <p className="text-center mt-2 text-sm font-semibold text-black">Nama Guru 9</p>
-                                <p className="text-center text-xs text-gray-600">Geografi</p>
-                            </div>
-                            <div className="flex-none w-32">
-                                <img
-                                    src="/guru1.jpg"
-                                    alt="Guru 10"
-                                    className="w-32 h-32 rounded-full object-cover mb-2"
-                                />
-                                <p className="text-center mt-2 text-sm font-semibold text-black">Nama Guru 10</p>
-                                <p className="text-center text-xs text-gray-600">PPKN</p>
-                            </div>
-                            <div className="flex-none w-32">
-                                <img
-                                    src="/guru1.jpg"
-                                    alt="Guru 11"
-                                    className="w-32 h-32 rounded-full object-cover mb-2"
-                                />
-                                <p className="text-center mt-2 text-sm font-semibold text-black">Nama Guru 11</p>
-                                <p className="text-center text-xs text-gray-600">Seni Budaya</p>
+                                <p className="text-sm font-semibold text-black">Teguh Gumilar, S.Pd</p>
+                                <p className="text-xs text-gray-600">Guru 8</p>
                             </div>
                         </div>
                     </div>
 
                     {/* Struktur Organisasi Sekolah */}
-                    <div className="text-center mt-12">
-                        <h2 className="mb-3 text-2xl font-semibold whitespace-nowrap text-black">
+                    <div id="profil-sekolah" className="text-center mt-16">
+                        <h2 className="mb-3 text-2xl font-semibold text-black">
                             Struktur Organisasi Sekolah
                         </h2>
-
+                        {/* Tambahkan konten struktur organisasi di sini */}
                     </div>
                 </div>
 
                 <section id="informasi-sekolah" className="py-16" style={{backgroundColor: '#E8F5FC'}}>
-                    <div className="max-w-7xl mx-auto px-4">
+                    <div className="container mx-auto px-4">
                         <div className="text-center mb-8">
                             <h2 className="text-3xl font-bold text-black">Informasi Sekolah</h2>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                             <div className="bg-white p-6 rounded-lg shadow-md">
                                 <h3 className="text-2xl font-semibold mb-4 text-black text-center">Visi dan Misi</h3>
-                                <p className="text-black text-justify">Menjadi sekolah unggulan dengan pendidikan yang berkualitas
-                                    dan karakter yang kuat untuk masa depan yang lebih baik.</p>
+                                <p className="text-black text-justify">Visi SD Negeri Margasari, Kecamatan Ciawi, Kabupaten Tasikmalaya di rumuskan sebagai berikut :
+                                    “Terwujudnya generasi muda yang berkarakter, cerdas, dan berakhlak mulia melalui pendidikan yang berkualitas dan berkelanjutan.”</p>
                             </div>
                             <div className="bg-white p-6 rounded-lg shadow-md">
                                 <h3 className="text-2xl font-semibold mb-4 text-black text-center">Sejarah Sekolah</h3>
-                                <p className="text-black text-justify">Didirikan pada tahun XXXX, SDN Margasari telah berkomitmen
-                                    untuk memberikan pendidikan yang berkualitas dan membentuk karakter siswa.</p>
+                                <p className="text-black text-justify">Setelah 4 tahun Indonesia merdeka pada tahun 1945, pemerintah Indonesia mulai membangun sistem pendidikan nasional yang lebih inklusif dan menyeluruh. SD Negeri Margasari Kecamatan Ciawi Kabupaten Tasikmalaya adalah salah satu hasil dari program pemerintah untuk meningkatkan akses pendidikan dasar di daerah.</p>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                <section id="berita" className="py-2" style={{backgroundColor: '#E8F5FC'}}>
-                    <div className="max-w-7xl mx-auto px-4">
-                        <div className="text-center">
-                            <h2 className="text-3xl font-bold mb-6 text-black">Berita dan Pengumuman</h2>
-                        </div>
-                        <div className="space-y-4">
-                            <article className="bg-white p-6 rounded-lg shadow-md text-center">
-                                <h3 className="text-2xl font-semibold mb-2 text-black">Pengumuman Kegiatan Sekolah</h3>
-                                <p className="text-black text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                    Vivamus lacinia odio vitae vestibulum.</p>
-                            </article>
-                            <article className="bg-white p-6 rounded-lg shadow-md text-center">
-                                <h3 className="text-2xl font-semibold mb-2 text-black">Acara Mendatang</h3>
-                                <p className="text-black text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                    Vivamus lacinia odio vitae vestibulum.</p>
-                            </article>
+                <section id="visi-misi" className="py-16 bg-0-100">
+                    <div className="container mx-auto px-4">
+                        <h2 className="text-3xl font-bold text-center text-black mb-8">Visi & Misi</h2>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div className="bg-white p-6 rounded-lg shadow-md">
+                                <h3 className="text-2xl font-semibold mb-4 text-center text-black">Visi</h3>
+                                <p className="text-black text-justify">“Terwujudnya generasi muda yang berkarakter, cerdas, dan berakhlak mulia melalui pendidikan yang berkualitas dan berkelanjutan.”</p>
+                            </div>
+                            <div className="bg-white p-6 rounded-lg shadow-md">
+                                <h3 className="text-2xl font-semibold mb-4 text-center text-black">Misi</h3>
+                                <p className="text-black text-justify">1. Menyediakan pendidikan yang berkualitas dan berkarakter untuk siswa.</p>
+                                <p className="text-black text-justify">2. Meningkatkan keterampilan dan pengetahuan siswa melalui pembelajaran yang inovatif.</p>
+                                <p className="text-black text-justify">3. Mengembangkan nilai-nilai akhlak mulia dalam kehidupan sehari-hari siswa.</p>
+                            </div>
                         </div>
                     </div>
                 </section>
 
-                <div className="w-full max-w-7xl mx-auto p-5">
-                    <div
-                        className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30">
-                        <h2 className="mb-3 text-2xl font-semibold whitespace-nowrap text-black">
-                            Lokasi SD Negeri Margasari
-                        </h2>
-                        <div className="flex flex-col md:flex-row md:space-x-4">
-                            <p className="m-0 text-justify text-sm opacity-80 text-black">
-                                JL. Margasari No. 20 Desa Margasari,
-                            </p>
-                            <p className="m-0 text-justify text-sm opacity-80 text-black">
-                                KEC. Ciawi, Tasikmalaya, Jawa Barat
-                            </p>
+                <section id="kontak-kami" className="py-16">
+                    <div className="container mx-auto px-4">
+                        <div className="text-center mb-8">
+                            <h2 className="text-3xl font-bold text-black">Kontak Kami</h2>
                         </div>
-
-                        <div className="mt-4">
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.3509402568993!2d108.13242657407346!3d-7.168129944885859!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f4c1a63ec0b75%3A0xdaa6969977ef7ff4!2sSD%20Negeri%20Margasari!5e0!3m2!1sid!2sid!4v1692024897123!5m2!1sid!2sid"
-                                width="100%"
-                                height="600"
-                                loading="lazy"
-                                title="Google Maps"
-                                className="rounded-lg border border-gray-300"
-                            ></iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div className="w-full max-w-7xl mx-auto p-5">
-                <div
-                    className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30">
-                    <h2 className="mb-3 text-2xl font-semibold text-black text-center">
-                        Kontak Kami
-                    </h2>
-                    <div className="flex flex-col items-center">
-                        <p className="m-0 max-w-[30ch] text-sm opacity-80 text-black text-center mb-6">
-                            (021) 123-4567<br />
-                            info@sdkemenangan.sch.id
-                        </p>
-                        <div className="flex space-x-4 mb-2"> {/* Jarak antar ikon sosial media */}
-                            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-                                <FontAwesomeIcon icon={faFacebook} className="text-blue-600 hover:text-blue-800 fa-2x" />
-                            </a>
-                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-                                <FontAwesomeIcon icon={faInstagram} className="text-pink-600 hover:text-pink-800 fa-2x" />
-                            </a>
-                            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
-                                <FontAwesomeIcon icon={faYoutube} className="text-red-600 hover:text-red-800 fa-2x" />
-                            </a>
-                            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer">
-                                <FontAwesomeIcon icon={faTiktok} className="text-black hover:text-gray-400 fa-2x" />
-                            </a>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div className="bg-white p-6 rounded-lg shadow-md">
+                                <h3 className="text-2xl font-semibold mb-4 text-black text-center">Kontak Kami</h3>
+                                <p className="text-black text-justify">Alamat: Jl. Raya Margasari No. 123, Kec. Ciawi, Kab. Tasikmalaya</p>
+                                <p className="text-black text-justify">Telepon: (0265) 123456</p>
+                                <p className="text-black text-justify">Email: sd.margasari@domain.com</p>
+                            </div>
+                            <div className="bg-white p-6 rounded-lg shadow-md">
+                                <h3 className="text-2xl font-semibold mb-4 text-black text-center">Ikuti Kami</h3>
+                                <div className="flex justify-center space-x-4">
+                                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
+                                        <FontAwesomeIcon icon={faFacebook} size="2x" />
+                                    </a>
+                                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-pink-600 hover:text-pink-800">
+                                        <FontAwesomeIcon icon={faInstagram} size="2x" />
+                                    </a>
+                                    <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="text-red-600 hover:text-red-800">
+                                        <FontAwesomeIcon icon={faYoutube} size="2x" />
+                                    </a>
+                                    <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" className="text-black hover:text-gray-800">
+                                        <FontAwesomeIcon icon={faTiktok} size="2x" />
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </section>
             </div>
-
-            <footer className="text-black mb-2 py-2 text-center">
-                <p className="text-sm">
-                    &copy; {new Date().getFullYear()} SDN Margasari. Semua Hak Cipta Dilindungi.
-                </p>
-            </footer>
         </>
     );
 }

@@ -11,9 +11,9 @@ const inter = Inter({ subsets: ["latin"] });
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     const [backgroundImageIndex, setBackgroundImageIndex] = useState(0);
     const backgroundImages = [
-        '/bg-1.jpg',
-        '/bg-2.jpg',
-        '/bg-3.jpg'
+        '/SDN_MARGASARI.jpeg',
+        '/SDN.jpeg',
+        '/SDN_MARGASARI.jpeg'
     ];
 
     useEffect(() => {
@@ -22,7 +22,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         }, 5000);
 
         return () => clearInterval(interval);
-    }, [backgroundImages.length]); // Menambahkan backgroundImages.length ke dalam array dependensi
+    }, [backgroundImages.length]);
 
     return (
         <html lang="id">
@@ -33,7 +33,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <title>SD Negeri Margasari</title>
             <link rel="icon" href="/logo_sd.png" type="image/png" />
         </head>
-        <body className={`${inter.className} bg-solid`}>
+        <body className={`${inter.className} bg-solid`} style={{ backgroundColor: '#E8F5FC' }}>
         <div
             className="background-carousel"
             style={{
@@ -41,12 +41,25 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 height: '100vh',
                 width: '100%',
                 backgroundSize: 'cover',
-                backgroundPosition: 'center'
+                backgroundPosition: 'center',
+                position: 'relative', // Ensure the background is positioned relative to the viewport
+                zIndex: -1 // Place the background image behind other content
             }}
         />
 
-        <main className="flex min-h-screen flex-col items-center justify-between py-0 px-6 relative bg-solid">
-            <h2 className="text-black text-center text-2xl font-bold mb-2 mt-6">Foto Sekolah</h2>
+        <header className="fixed top-0 left-0 w-full p-4 bg-[#E8F5FC]">
+            <nav className="container mx-auto">
+                <ul className="flex justify-center space-x-4">
+                    <li><a href="/pages/visi-misi" className="text-blue-600 hover:text-blue-800">Visi & Misi</a></li>
+                    <li><a href="/tentang-sekolah" className="text-blue-600 hover:text-blue-800">Tentang Sekolah</a></li>
+                    <li><a href="/profil-sekolah" className="text-blue-600 hover:text-blue-800">Profil Sekolah</a></li>
+                    <li><a href="/berita" className="text-blue-600 hover:text-blue-800">Berita</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main className="flex min-h-screen flex-col items-center justify-between py-16 px-6 relative" style={{ backgroundColor: '#E8F5FC' }}>
+            <h2 className="text-black text-center text-2xl font-bold mb-2">Foto Sekolah</h2>
             <div className="w-full max-w-4xl mx-auto mb-10">
                 <div className="bg-white rounded-lg p-1 mt-1 mb-2">
                     <div className="relative">
