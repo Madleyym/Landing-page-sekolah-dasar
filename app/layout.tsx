@@ -1,9 +1,8 @@
-// RootLayout.tsx
 "use client";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Image from "next/image";
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
@@ -23,7 +22,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         }, 5000);
 
         return () => clearInterval(interval);
-    }, []);
+    }, [backgroundImages.length]); // Menambahkan backgroundImages.length ke dalam array dependensi
 
     return (
         <html lang="id">
@@ -35,7 +34,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <link rel="icon" href="/logo_sd.png" type="image/png" />
         </head>
         <body className={`${inter.className} bg-solid`}>
-
         <div
             className="background-carousel"
             style={{
@@ -105,8 +103,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <div className="w-full max-w-4xl mx-auto mb-10">
                 <h2 className="text-black text-center text-2xl font-bold mb-6">Video Sekolah</h2>
                 <div className="bg-black p-1 mt-1">
-                    <div className="video-card">
-                        <video controls>
+                    <div className="video-card text-center">
+                        <video controls className="mx-auto">
                             <source src="/contoh.mp4" type="video/mp4"/>
                             Your browser does not support the video tag.
                         </video>

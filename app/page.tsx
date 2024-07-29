@@ -136,12 +136,11 @@ export default function Home() {
                         </div>
                     </div>
 
-                    {/* Bagian Struktur Organisasi Sekolah */}
+                    {/* Struktur Organisasi Sekolah */}
                     <div className="text-center mt-12">
                         <h2 className="mb-3 text-2xl font-semibold whitespace-nowrap text-black">
                             Struktur Organisasi Sekolah
                         </h2>
-
 
                     </div>
                 </div>
@@ -153,13 +152,13 @@ export default function Home() {
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                             <div className="bg-white p-6 rounded-lg shadow-md">
-                                <h3 className="text-2xl font-semibold mb-4 text-black">Visi dan Misi</h3>
-                                <p className="text-black">Menjadi sekolah unggulan dengan pendidikan yang berkualitas
+                                <h3 className="text-2xl font-semibold mb-4 text-black text-center">Visi dan Misi</h3>
+                                <p className="text-black text-justify">Menjadi sekolah unggulan dengan pendidikan yang berkualitas
                                     dan karakter yang kuat untuk masa depan yang lebih baik.</p>
                             </div>
                             <div className="bg-white p-6 rounded-lg shadow-md">
-                                <h3 className="text-2xl font-semibold mb-4 text-black">Sejarah Sekolah</h3>
-                                <p className="text-black">Didirikan pada tahun XXXX, SDN Margasari telah berkomitmen
+                                <h3 className="text-2xl font-semibold mb-4 text-black text-center">Sejarah Sekolah</h3>
+                                <p className="text-black text-justify">Didirikan pada tahun XXXX, SDN Margasari telah berkomitmen
                                     untuk memberikan pendidikan yang berkualitas dan membentuk karakter siswa.</p>
                             </div>
                         </div>
@@ -172,14 +171,14 @@ export default function Home() {
                             <h2 className="text-3xl font-bold mb-6 text-black">Berita dan Pengumuman</h2>
                         </div>
                         <div className="space-y-4">
-                            <article className="bg-white p-6 rounded-lg shadow-md">
+                            <article className="bg-white p-6 rounded-lg shadow-md text-center">
                                 <h3 className="text-2xl font-semibold mb-2 text-black">Pengumuman Kegiatan Sekolah</h3>
-                                <p className="text-black">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                <p className="text-black text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                     Vivamus lacinia odio vitae vestibulum.</p>
                             </article>
-                            <article className="bg-white p-6 rounded-lg shadow-md">
+                            <article className="bg-white p-6 rounded-lg shadow-md text-center">
                                 <h3 className="text-2xl font-semibold mb-2 text-black">Acara Mendatang</h3>
-                                <p className="text-black">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                <p className="text-black text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                     Vivamus lacinia odio vitae vestibulum.</p>
                             </article>
                         </div>
@@ -190,11 +189,17 @@ export default function Home() {
                     <div
                         className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30">
                         <h2 className="mb-3 text-2xl font-semibold whitespace-nowrap text-black">
-                            Lokasi SDN Margasari
+                            Lokasi SD Negeri Margasari
                         </h2>
-                        <p className="m-0 max-w-[30ch] text-sm opacity-80 text-black">
-                            JL. Margasari No. 20 Desa Margasari, KEC. Ciawi, Tasikmalaya, Jawa Barat
-                        </p>
+                        <div className="flex flex-col md:flex-row md:space-x-4">
+                            <p className="m-0 text-justify text-sm opacity-80 text-black">
+                                JL. Margasari No. 20 Desa Margasari,
+                            </p>
+                            <p className="m-0 text-justify text-sm opacity-80 text-black">
+                                KEC. Ciawi, Tasikmalaya, Jawa Barat
+                            </p>
+                        </div>
+
                         <div className="mt-4">
                             <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.3509402568993!2d108.13242657407346!3d-7.168129944885859!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f4c1a63ec0b75%3A0xdaa6969977ef7ff4!2sSD%20Negeri%20Margasari!5e0!3m2!1sid!2sid!4v1692024897123!5m2!1sid!2sid"
