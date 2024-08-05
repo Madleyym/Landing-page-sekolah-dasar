@@ -5,6 +5,7 @@ import Image from "next/image";
 import React, { useState, useEffect } from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -47,18 +48,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             }}
         />
 
-        <header className="fixed top-0 left-0 w-full p-4 bg-[#E8F5FC]">
-            <nav className="container mx-auto">
-                <ul className="flex justify-center space-x-4">
-                    <li><a href="/pages/visi-misi" className="text-blue-600 hover:text-blue-800">Visi & Misi</a></li>
-                    <li><a href="/tentang-sekolah" className="text-blue-600 hover:text-blue-800">Tentang Sekolah</a></li>
-                    <li><a href="/profil-sekolah" className="text-blue-600 hover:text-blue-800">Profil Sekolah</a></li>
-                    <li><a href="/berita" className="text-blue-600 hover:text-blue-800">Berita</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <main className="flex min-h-screen flex-col items-center justify-between py-16 px-6 relative" style={{ backgroundColor: '#E8F5FC' }}>
+        <main className="flex min-h-screen flex-col items-center justify-between py-16 px-6 relative"
+              style={{backgroundColor: '#E8F5FC'}}>
             <h2 className="text-black text-center text-2xl font-bold mb-2">Foto Sekolah</h2>
             <div className="w-full max-w-4xl mx-auto mb-10">
                 <div className="bg-white rounded-lg p-1 mt-1 mb-2">
@@ -124,7 +115,20 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     </div>
                 </div>
             </div>
-
+            <header className="fixed top-0 right-0 w-full p-4 shadow-md" style={{backgroundColor: '#E8F5FC'}}>
+                <nav className="container mx-auto">
+                    <ul className="flex justify-center space-x-4">
+                        <li><Link href="/" className="text-blue-600 hover:text-blue-800">Home</Link>
+                        </li>
+                        <li><Link href="/prestasi" className="text-blue-600 hover:text-blue-800">Prestasi</Link>
+                        </li>
+                        <li><Link href="/tentang-sekolah" className="text-blue-600 hover:text-blue-800">Tentang
+                            Sekolah</Link></li>
+                        <li><Link href="/galeri-sekolah" className="text-blue-600 hover:text-blue-800">Galeri Sekolah</Link></li>
+                        {/*<li><Link href="/berita" className="text-blue-600 hover:text-blue-800">Berita</Link></li>*/}
+                    </ul>
+                </nav>
+            </header>
             {children}
         </main>
         </body>
